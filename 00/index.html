@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미래 시제 마스터 클래스</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700&display=swap');
+        body { font-family: 'Pretendard', sans-serif; scroll-behavior: smooth; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .card-hover:hover { transform: translateY(-5px); transition: all 0.3s ease; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Header -->
+    <header class="gradient-bg text-white py-12 px-6 shadow-lg text-center relative">
+        <!-- Home Button -->
+        <a href="../html.index" class="absolute top-6 left-6 flex items-center gap-2 px-4 py-2 border border-white/30 rounded-full bg-white/10 hover:bg-white/20 transition-all text-sm font-medium backdrop-blur-sm">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+
+        <h1 class="text-4xl font-bold mb-4">📘 영어 미래 시제 마스터</h1>
+        <p class="text-lg opacity-90">확신도와 준비 상태에 따른 완벽한 시제 선택 가이드</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 bg-white shadow-md z-50">
+        <div class="max-w-5xl mx-auto flex justify-around">
+            <button onclick="switchTab('concept')" class="tab-btn px-6 py-4 font-semibold text-blue-600 border-b-2 border-blue-600" id="btn-concept">개념 요약</button>
+            <button onclick="switchTab('nuance')" class="tab-btn px-6 py-4 font-semibold text-slate-500" id="btn-nuance">뉘앙스 시뮬레이터</button>
+            <button onclick="switchTab('quiz')" class="tab-btn px-6 py-4 font-semibold text-slate-500" id="btn-quiz">실전 퀴즈</button>
+        </div>
+    </nav>
+
+    <main class="max-w-5xl mx-auto p-6 mt-8">
+        
+        <!-- Section 1: Concept Summary -->
+        <section id="concept" class="tab-content active space-y-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- 예측 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-lg mr-4"><i class="fas fa-search text-blue-600 text-xl"></i></div>
+                        <h2 class="text-xl font-bold">1. 예측 (Prediction)</h2>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="p-3 bg-blue-50 rounded-lg">
+                            <p class="font-bold text-blue-800">be going to</p>
+                            <p class="text-sm">눈앞의 확실한 징조가 있을 때 (객관적)</p>
+                            <p class="italic text-xs mt-1 text-slate-500">"Look at those clouds! It's going to rain."</p>
+                        </div>
+                        <div class="p-3 bg-indigo-50 rounded-lg">
+                            <p class="font-bold text-indigo-800">will</p>
+                            <p class="text-sm">내 직감이나 막연한 생각 (주관적)</p>
+                            <p class="italic text-xs mt-1 text-slate-500">"I think it will rain tomorrow."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 계획 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-100 p-3 rounded-lg mr-4"><i class="fas fa-calendar-check text-green-600 text-xl"></i></div>
+                        <h2 class="text-xl font-bold">2. 계획 (Plans)</h2>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="p-3 bg-emerald-50 rounded-lg">
+                            <p class="font-bold text-emerald-800">am/is/are -ing</p>
+                            <p class="text-sm">구체적인 약속/준비 완료 (사회적)</p>
+                            <p class="italic text-xs mt-1 text-slate-500">"I'm meeting Jane at 7 PM."</p>
+                        </div>
+                        <div class="p-3 bg-green-50 rounded-lg">
+                            <p class="font-bold text-green-800">be going to</p>
+                            <p class="text-sm">혼자 마음먹은 결정 (의도)</p>
+                            <p class="italic text-xs mt-1 text-slate-500">"I'm going to learn French."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 특수 표현 -->
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
+                <h2 class="text-2xl font-bold mb-6 flex items-center">
+                    <i class="fas fa-star text-yellow-500 mr-3"></i> 특수 미래 표현
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                    <div class="text-center p-4">
+                        <p class="font-bold text-lg text-purple-600 mb-2">won't</p>
+                        <p class="text-sm text-slate-600">도무지 하지 않는 '고집'</p>
+                        <p class="text-xs text-slate-400 mt-1">"The door won't open."</p>
+                    </div>
+                    <div class="text-center p-4 border-x border-slate-100">
+                        <p class="font-bold text-lg text-orange-600 mb-2">was going to</p>
+                        <p class="text-sm text-slate-600">실현되지 못한 과거 계획</p>
+                        <p class="text-xs text-slate-400 mt-1">"I was going to call you..."</p>
+                    </div>
+                    <div class="text-center p-4">
+                        <p class="font-bold text-lg text-red-600 mb-2">Time Clauses</p>
+                        <p class="text-sm text-slate-600">When/Until 뒤엔 '현재'</p>
+                        <p class="text-xs text-slate-400 mt-1">"...when he comes back."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Nuance Simulator -->
+        <section id="nuance" class="tab-content space-y-6">
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
+                <h3 class="text-2xl font-bold mb-4">뉘앙스 시뮬레이터</h3>
+                <p class="text-slate-600 mb-8">상황을 선택하고 원어민의 의도에 맞는 시제를 골라보세요.</p>
+                
+                <div class="space-y-8">
+                    <div class="p-6 bg-slate-50 rounded-xl">
+                        <p class="font-bold text-lg mb-4">상황: 친구와 내일 만나기로 시간과 장소를 다 정했다면?</p>
+                        <div class="flex flex-wrap gap-4">
+                            <button onclick="sim('I will meet my friend.', '❌ 오답: 이것은 지금 막 결정했거나 막연한 의지처럼 들려요.', 'red')" class="px-6 py-2 bg-white border-2 border-slate-200 rounded-full hover:border-blue-500 transition">will meet</button>
+                            <button onclick="sim('I\'m going to meet my friend.', '⚠️ 세모: 혼자 마음먹은 계획이지만, 약속의 느낌은 약해요.', 'yellow')" class="px-6 py-2 bg-white border-2 border-slate-200 rounded-full hover:border-blue-500 transition">going to meet</button>
+                            <button onclick="sim('I\'m meeting my friend.', '✅ 정답: 이미 조율이 끝난 사회적 약속은 진행형이 가장 정확합니다!', 'green')" class="px-6 py-2 bg-white border-2 border-slate-200 rounded-full hover:border-blue-500 transition">am meeting</button>
+                        </div>
+                    </div>
+
+                    <div id="sim-result" class="hidden p-6 rounded-xl text-center font-bold text-lg transition-all duration-300">
+                        <!-- Result message -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Quiz -->
+        <section id="quiz" class="tab-content space-y-6">
+            <div id="quiz-area" class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
+                <div id="q-content">
+                    <div class="flex justify-between items-center mb-6">
+                        <span id="q-num" class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">문제 1</span>
+                        <span id="q-score" class="text-slate-500">Score: 0</span>
+                    </div>
+                    <h3 id="q-text" class="text-xl font-bold mb-8 italic text-slate-800">질문이 여기에 표시됩니다.</h3>
+                    <div id="q-options" class="grid grid-cols-1 gap-4">
+                        <!-- Options injected by JS -->
+                    </div>
+                </div>
+
+                <div id="q-feedback" class="hidden mt-8 p-4 rounded-lg text-center">
+                    <p id="feedback-text" class="font-semibold"></p>
+                    <button onclick="nextQuestion()" class="mt-4 bg-slate-800 text-white px-8 py-2 rounded-lg hover:bg-slate-700">다음 문제</button>
+                </div>
+
+                <div id="quiz-final" class="hidden text-center py-10">
+                    <div class="text-6xl mb-6">🎉</div>
+                    <h2 class="text-3xl font-bold mb-4">학습 완료!</h2>
+                    <p id="final-score-text" class="text-xl text-slate-600 mb-8"></p>
+                    <button onclick="resetQuiz()" class="bg-blue-600 text-white px-10 py-3 rounded-full font-bold shadow-lg hover:bg-blue-700">다시 도전하기</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // Tab System
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+
+            document.querySelectorAll('.tab-btn').forEach(el => {
+                el.classList.remove('text-blue-600', 'border-b-2', 'border-blue-600');
+                el.classList.add('text-slate-500');
+            });
+            document.getElementById('btn-' + tabId).classList.add('text-blue-600', 'border-b-2', 'border-blue-600');
+            document.getElementById('btn-' + tabId).classList.remove('text-slate-500');
+        }
+
+        // Simulator
+        function sim(text, result, color) {
+            const resDiv = document.getElementById('sim-result');
+            resDiv.classList.remove('hidden', 'bg-red-100', 'text-red-700', 'bg-yellow-100', 'text-yellow-700', 'bg-green-100', 'text-green-700');
+            
+            if(color === 'red') resDiv.classList.add('bg-red-100', 'text-red-700');
+            else if(color === 'yellow') resDiv.classList.add('bg-yellow-100', 'text-yellow-700');
+            else resDiv.classList.add('bg-green-100', 'text-green-700');
+
+            resDiv.innerHTML = `<p class="mb-2">"${text}"</p><p class="text-sm font-normal">${result}</p>`;
+        }
+
+        // Quiz Logic
+        const questions = [
+            {
+                q: "The train ______ at 10:30 AM tomorrow. (공식 기차 시간표)",
+                options: ["will leave", "is leaving", "leaves"],
+                answer: 2,
+                reason: "공항, 역 등의 공식 시스템 시간표는 현재 시제를 씁니다."
+            },
+            {
+                q: "Look at the dark clouds! It ______ rain soon.",
+                options: ["will", "is going to", "is raining"],
+                answer: 1,
+                reason: "먹구름이라는 확실한 '객관적 징조'가 있으므로 be going to가 적절합니다."
+            },
+            {
+                q: "I tried to start my car, but it ______ start.",
+                options: ["won't", "don't", "wasn't"],
+                answer: 0,
+                reason: "사물이 도무지 말을 듣지 않는 '고집'을 나타낼 때는 won't를 씁니다."
+            },
+            {
+                q: "I ______ to call you last night, but I fell asleep.",
+                options: ["am going", "was going", "will be going"],
+                answer: 1,
+                reason: "과거의 계획이었으나 실현되지 못한 일은 was/were going to를 씁니다."
+            }
+        ];
+
+        let currentQ = 0;
+        let score = 0;
+
+        function loadQuestion() {
+            const q = questions[currentQ];
+            document.getElementById('q-num').innerText = `문제 ${currentQ + 1} / ${questions.length}`;
+            document.getElementById('q-text').innerText = q.q;
+            
+            const optionsDiv = document.getElementById('q-options');
+            optionsDiv.innerHTML = '';
+            q.options.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.className = "w-full p-4 text-left border border-slate-200 rounded-xl hover:bg-slate-50 transition font-medium";
+                btn.innerText = opt;
+                btn.onclick = () => checkAnswer(idx);
+                optionsDiv.appendChild(btn);
+            });
+        }
+
+        function checkAnswer(idx) {
+            const q = questions[currentQ];
+            const feedback = document.getElementById('q-feedback');
+            const feedbackText = document.getElementById('feedback-text');
+            
+            document.getElementById('q-options').style.pointerEvents = 'none';
+            feedback.classList.remove('hidden', 'bg-green-100', 'text-green-800', 'bg-red-100', 'text-red-800');
+
+            if(idx === q.answer) {
+                score++;
+                document.getElementById('q-score').innerText = `Score: ${score}`;
+                feedback.classList.add('bg-green-100', 'text-green-800');
+                feedbackText.innerHTML = `<i class="fas fa-check-circle mr-2"></i> 정답입니다! ${q.reason}`;
+            } else {
+                feedback.classList.add('bg-red-100', 'text-red-800');
+                feedbackText.innerHTML = `<i class="fas fa-times-circle mr-2"></i> 오답입니다. ${q.reason}`;
+            }
+        }
+
+        function nextQuestion() {
+            currentQ++;
+            document.getElementById('q-feedback').classList.add('hidden');
+            document.getElementById('q-options').style.pointerEvents = 'auto';
+
+            if(currentQ < questions.length) {
+                loadQuestion();
+            } else {
+                showFinal();
+            }
+        }
+
+        function showFinal() {
+            document.getElementById('q-content').classList.add('hidden');
+            document.getElementById('quiz-final').classList.remove('hidden');
+            document.getElementById('final-score-text').innerText = `총 ${questions.length}문제 중 ${score}문제를 맞히셨습니다!`;
+        }
+
+        function resetQuiz() {
+            currentQ = 0;
+            score = 0;
+            document.getElementById('q-score').innerText = "Score: 0";
+            document.getElementById('q-content').classList.remove('hidden');
+            document.getElementById('quiz-final').classList.add('hidden');
+            document.getElementById('q-options').style.pointerEvents = 'auto';
+            loadQuestion();
+        }
+
+        window.onload = loadQuestion;
+    </script>
+</body>
+</html>
